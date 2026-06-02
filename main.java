@@ -44,7 +44,8 @@ public class main {
 		
 		
 		long inicio = System.currentTimeMillis();
-		List<Transacao> suspeitas = dados.stream().filter(ValidorFraude::ehSuspeita).toList();
+		//List<Transacao> suspeitas = dados.stream().filter(ValidorFraude::ehSuspeita).toList();
+		List<Transacao> suspeitas = dados.parallelStream().filter(ValidorFraude::ehSuspeita).toList();
 		long fim = System.currentTimeMillis();
 		
 		System.out.println("Tempo:" + (fim - inicio) +"ms"); 
