@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 
-public class main {
+public class Detector {
 
 	public static void main(String[] args) {
 		List<Transacao> dados = new ArrayList<>();
